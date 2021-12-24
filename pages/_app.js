@@ -4,8 +4,8 @@ const colors = {
   main: '#650ec2',
   dark: '#3a0a6e',
   light: '#dddddd',
-  grey: '#888888',
-  darkgrey: '#333333',
+  grey: "#333333",
+  darkgrey: "#232425",
 };
 
 const theme = createTheme({
