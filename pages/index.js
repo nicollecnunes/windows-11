@@ -1,6 +1,8 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import Background from '../public/background.jpg'
+import Background from '../public/background.jpg';
+import MenuBar from '../src/containers/MenuBar';
+import Apps from '../src/containers/Apps';
 
 const Home = () => {
   return (
@@ -13,8 +15,12 @@ const Home = () => {
         backgroundSize: 'cover',
       }}
     >
-      <Box sx={{ height: '100%' }}>Apps</Box>
-      <Box sx={{ bottom: '0px', position: 'fixed'}}>MenUbar</Box>
+      <Box sx={{ height: '100%' }}>
+        <Apps />
+      </Box>
+      <Box sx={{ bottom: '0px', position: 'fixed'}}>
+        <MenuBar />
+      </Box>
     </Box>
   )
 }
