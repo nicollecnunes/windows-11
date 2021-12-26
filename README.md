@@ -2,11 +2,7 @@
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
-
-Abra [http://localhost:3000](http://localhost:3000) pelo browser para ver o resultado.
 
 ## Frameworks & Bibliotecas:
 
