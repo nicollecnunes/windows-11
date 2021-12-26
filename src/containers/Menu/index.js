@@ -9,11 +9,12 @@ import {
   Box,
   TextField,
   InputAdornment,
+  Grid,
 } from "@mui/material";
 import React from "react";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import SearchIcon from "@mui/icons-material/Search";
-import { pinnedApps } from "../../utils/apps";
+import { pinnedApps, recommendedApps } from "../../utils/apps";
 
 const Menu = ({ open, anchorEl, handleClose }) => {
   const theme = useTheme();
@@ -102,9 +103,9 @@ const Menu = ({ open, anchorEl, handleClose }) => {
                 width: 98,
                 color: "#ffff",
                 textTransform: "inherit",
-								'&:hover': {
-									backgroundColor: 'rgba(255,255,255,0.1)',
-								},
+                "&:hover": {
+                  backgroundColor: "rgba(255,255,255,0.1)",
+                },
               }}
             >
               <Stack
@@ -120,6 +121,49 @@ const Menu = ({ open, anchorEl, handleClose }) => {
           ))}
         </Stack>
         <MenuLabel title="Recommended" buttonText="More >" />
+        <Grid
+          container
+          direction="row"
+          flexWrap="wrap"
+          justifyContent="flex-start"
+          spacing={2}
+          sx={{ px: 2 }}
+        >
+          {recommendedApps.map((app, i) => (
+            <Grid item key={app.name} xs={12} lg={6}>
+              <Button
+                fullWidth
+                sx={{
+                  py: 1,
+                  px: 2,
+                  justifyContent: "flex-start",
+                  textTransform: "inherit",
+                  "&:hover": {
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                  },
+                }}
+              >
+                <Stack direction="row" alignItems="center" spacing={2}>
+                  <img src={app.icon} alt={app.name} style={{ height: 30 }} />
+                  <Stack alignItems="flex-start">
+                    <Typography
+                      variant="caption"
+                      sx={{ color: '#ffff'}}
+                    >
+                      {app.name}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: theme.palette.primary.light }}
+                    >
+                      Recently Added
+                    </Typography>
+                  </Stack>
+                </Stack>
+              </Button>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
       <Stack
         justifyContent="center"

@@ -41,17 +41,11 @@ export const pinnedApps = [
   { name: "Node JS", icon: Nodejs },
   { name: "Microsoft Word", icon: Word },
   { name: "Powershell", icon: Powershell },
-  { name: "Python", icon: Python },
-  { name: "Spotify", icon: Spotify },
-  { name: "Steam", icon: Steam },
-  { name: "VS Code", icon: VSCode },
 ];
 
 export const recommendedApps = [
-  { name: "Google Chrome (1)", icon: Chrome },
-  { name: "Discord (Code With Sam)", icon: Discord },
-  { name: "Email (Gmail, Live, Yahoo)", icon: Email },
-  { name: "VS Code (Editor)", icon: VSCode },
+  { name: "Discord", icon: Discord },
+  { name: "VS Code", icon: VSCode },
   { name: "Python (3.8.0)", icon: Python },
   { name: "Node JS (16.9.0)", icon: Nodejs },
 ];

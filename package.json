@@ -16,6 +16,8 @@
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.4",
     "react": "17.0.2",
+    "react-dnd": "^14.0.4",
+    "react-dnd-html5-backend": "^14.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
